@@ -13,12 +13,12 @@ $bar_ws_width_focus_active: 2.045rem;
 }
 
 .bar-bg {
-    background-color: $layer0;
+    background-color: transparent;
     min-height: 2.727rem;
 }
 
 .bar-bg-focus {
-    background-color: $layer0;
+    background-color: $layer1;
     min-height: 1.364rem;
 }
 
@@ -41,10 +41,7 @@ $bar_ws_width_focus_active: 2.045rem;
 
 .bar-group {
     background-color: $layer1;
-}
-
-.bar-group-borderless {
-    background-color: transparent;
+    background-color: rgba($color: #000000, $alpha: .4);
 }
 
 .bar-group-pad {
@@ -116,10 +113,11 @@ $bar_ws_width_focus_active: 2.045rem;
 .bar-ws-active {
     background-color: $workspaceLayer3;
     color: $workspaceOnLayer3;
+    // background-color: rgba($color: #000000, $alpha: 1.0);
 }
 
 .bar-ws-occupied {
-    background-color: $layer2;
+    background-color: rgba($layer3, 0.4);
     color: $workspaceOnLayer2;
 }
 
@@ -175,10 +173,6 @@ $bar_ws_width_focus_active: 2.045rem;
     color: $battOnLayer2;
 }
 
-.bar-batt-circprog-borderless {
-    background-color: transparent;
-}
-
 .bar-batt-circprog-low {
     background-color: $error;
     color: $errorContainer;
@@ -208,10 +202,6 @@ $bar_ws_width_focus_active: 2.045rem;
     color: $ramOnLayer2;
 }
 
-.bar-ram-circprog-borderless {
-    background-color: transparent;
-}
-
 .bar-ram-txt {
     color: $ramOnLayer1;
 }
@@ -232,10 +222,6 @@ $bar_ws_width_focus_active: 2.045rem;
     padding: 0rem;
     background-color: $swapLayer2;
     color: $swapOnLayer2;
-}
-
-.bar-swap-circprog-borderless {
-    background-color: transparent;
 }
 
 .bar-swap-txt {
@@ -260,10 +246,6 @@ $bar_ws_width_focus_active: 2.045rem;
     color: $cpuOnLayer2;
 }
 
-.bar-cpu-circprog-borderless {
-    background-color: transparent;
-}
-
 .bar-cpu-txt {
     color: $cpuOnLayer1;
 }
@@ -283,10 +265,6 @@ $bar_ws_width_focus_active: 2.045rem;
     padding: 0rem;
     background-color: $musicLayer2;
     color: $musicOnLayer2;
-}
-
-.bar-music-circprog-borderless {
-    background-color: transparent;
 }
 
 .bar-music-playstate-playing {
@@ -335,13 +313,13 @@ $bar_ws_width_focus_active: 2.045rem;
 }
 
 .corner {
-    background-color: $layer0;
-    @include large-rounding;
+    background-color: transparent;
+    //@include large-rounding;
 }
 
 .corner-black {
     background-color: $black; // Hard code: fake screen corner
-    @include large-rounding;
+    //@include large-rounding;
 }
 
 .bar-wintitle-topdesc {
@@ -408,10 +386,6 @@ $bar_ws_width_focus_active: 2.045rem;
     min-width: 1.77rem;
     background-color: $utilsLayer2;
     color: $utilsOnLayer2;
-}
-
-.bar-util-btn-borderless {
-    background-color: transparent;
 }
 
 .bar-util-btn:hover,

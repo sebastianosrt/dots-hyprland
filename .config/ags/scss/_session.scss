@@ -18,8 +18,8 @@
 .session-button-desc {
     background-color: $layer2;
     color: $onLayer2;
-    border-bottom-left-radius: $rounding_large;
-    border-bottom-right-radius: $rounding_large;
+    border-bottom-left-radius: 0;//$rounding_large;
+    border-bottom-right-radius: 0;//$rounding_large;
     padding: 0.205rem 0.341rem;
     font-weight: 700;
 }

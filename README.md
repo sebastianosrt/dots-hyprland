@@ -1,3 +1,5 @@
+## My Hyprland configuration, forked from [dots-hyprland](https://end-4.github.io/)
+
 <div align="center">
     <h1>【 end_4's Hyprland dotfiles 】</h1>
     <h3></h3>

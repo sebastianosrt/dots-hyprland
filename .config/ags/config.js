@@ -75,7 +75,22 @@ App.config({
     windows: Windows().flat(1),
 });
 
+Utils.monitorFile(
+    // directory that contains the scss files
+    `${App.configDir}/scss`,
+
+    // reload function
+    function() {
+        // main scss file
+        console.log(`sass -I "${GLib.get_user_state_dir()}/ags/scss" -I "${App.configDir}/scss/fallback" "${App.configDir}/scss/main.scss" "${COMPILED_STYLE_DIR}/style.css"`)
+        Utils.exec(`sass -I "${GLib.get_user_state_dir()}/ags/scss" -I "${App.configDir}/scss/fallback" "${App.configDir}/scss/main.scss" "${COMPILED_STYLE_DIR}/style.css"`);
+        
+        // compile, reset, apply
+        App.resetCss()
+        App.applyCss(`${COMPILED_STYLE_DIR}/style.css`)
+    },
+)
+
 // Stuff that don't need to be toggled. And they're async so ugh...
 forMonitorsAsync(Bar);
 // Bar().catch(print); // Use this to debug the bar. Single monitor only.
-

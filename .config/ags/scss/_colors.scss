@@ -1,5 +1,5 @@
-$rootTransparency: 0.22; // Transparency = 1 - opacity
-$transparency: 0.75;
+$rootTransparency: 0.12; // Transparency = 1 - opacity
+$transparency: 0.0;
 
 // Transparent versions
 @if $transparent == True {
@@ -37,7 +37,7 @@ $onLayer1Inactive: mix($onLayer1, $layer1, 45%);
 $onLayer1: $onSurfaceVariant;
 $layer2: mix($surfaceContainer, $surfaceContainerHigh, 55%);
 $onLayer2: $onSurface;
-$layer3: mix($surfaceContainerHigh, $onSurface, 96%);
+$layer3: $surfaceContainerHigh;
 $onLayer3: $onSurface;
 $layer1Hover: mix($layer1, $onLayer1, 85%);
 $layer1Active: mix($layer1, $onLayer1, 70%);
